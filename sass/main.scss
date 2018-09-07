@@ -1,4 +1,5 @@
 //variables
+//color pallete
 $grey: #191A1E;
 $mid-grey: #36383F;
 $light-grey: #7A7D8C;
@@ -10,20 +11,23 @@ $blue: #09BEFF;
 $yellow: #FFDE3E;
 $green: #47CF72;
 $purple: #AE62E4;
+
+//breakpoints
+$break-small: 605px;
 $break-medium: 914px;
 
+//fonts
+$main-font: 'Catamaran', sans-serif;
 
-// * {
-//   background-color: $grey;
-//   border: 1px solid red;
-//   box-sizing: border-box;
-// }
+//mixins
 
-// main styles
+
+//styles
 body {
   background-color: $grey;
   box-sizing: border-box;
-  font-family: 'Catamaran', sans-serif;
+  font-family: $main-font;
+  margin: 0px;
 }
 
 h1 {
@@ -32,6 +36,7 @@ h1 {
 
 #header-container {
   width: 100%;
+  min-height: 79px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -41,6 +46,7 @@ h1 {
 #header-content-one {
   display: flex;
   flex-direction: row;
+  margin-left: 28px;
 }
 
 #header-content-one-logo {
@@ -59,6 +65,7 @@ h1 {
   justify-content: flex-start;
   h1 {
     margin-right: 20px;
+    border-bottom: 2px solid $black;
   }
   #link-one {
     &:hover {
@@ -87,6 +94,7 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 8px;
   & *{
     margin-right: 20px;
   }
@@ -124,12 +132,26 @@ h1 {
   max-width: 1160px;
 }
 
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.body-header-link {
+  color: $blue;
+  font-size: 20px;
+  margin-bottom: -5px;
+}
+
 .body-title-row {
   display: flex;
   flex-direction: row;
   height: 80px;
   justify-content: space-between;
   border-bottom: 2px solid $blue;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .cards-container {
@@ -137,7 +159,6 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
 .card {
@@ -153,6 +174,9 @@ h1 {
   border-radius: 15px 15px 0px 0px;
   img {
     width: 100%;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 
@@ -210,15 +234,19 @@ h1 {
   }
 }
 
-
-@media only screen and (max-width: 914px) {
+//media queries
+@media only screen and (max-width: $break-medium) {
   .card {
       width: 50%;
+  } #header-content-one-links {
+    display: none;
   }
 }
 
-@media only screen and (max-width: 605px) {
+@media only screen and (max-width: $break-small) {
   .card {
       width: 100%;
+  } #bell-icon {
+    display: none;
   }
 }
