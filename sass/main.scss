@@ -6,6 +6,7 @@ $black: #000000;
 body {
   background-color: $grey;
   box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
 }
 
 h1 {
@@ -13,18 +14,47 @@ h1 {
 }
 
 #header-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: $black;
+}
+
+#header-content-one {
+  display: flex;
+  flex-direction: row;
+}
+
+#header-content-one-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   #logo-large {
-    height: 65px;
+    height: 28px;
+    }
   }
-  i {
-    color: white;
+
+  #header-content-one-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
+
   #header-content-two {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    i {
+        color: white;
+        font-size: 30pt;
+    }
+    img {
+      height: 44px;
+    }
   }
+
+#header-content-two {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,6 +1,7 @@
 body {
   background-color: #191A1E;
   box-sizing: border-box;
+  font-family: "Catamaran", sans-serif;
 }
 
 h1 {
@@ -8,18 +9,47 @@ h1 {
 }
 
 #header-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #000000;
 }
-#header-container #logo-large {
-  height: 65px;
+
+#header-content-one {
+  display: flex;
+  flex-direction: row;
 }
-#header-container i {
+
+#header-content-one-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-content-one-logo #logo-large {
+  height: 28px;
+}
+
+#header-content-one-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#header-content-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-content-two i {
   color: white;
+  font-size: 30pt;
 }
-#header-container #header-content-two {
+#header-content-two img {
+  height: 44px;
+}
+
+#header-content-two {
   display: flex;
   flex-direction: row;
 }
