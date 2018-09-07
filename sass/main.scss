@@ -1,0 +1,30 @@
+//variables
+$grey: #191A1E;
+$black: #000000;
+
+//main styles
+body {
+  background-color: $grey;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+}
+
+#header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $black;
+  #logo-large {
+    height: 65px;
+  }
+  i {
+    color: white;
+  }
+  #header-content-two {
+    display: flex;
+    flex-direction: row;
+  }
+}
