@@ -1,3 +1,7 @@
+* {
+  border: 1px solid red;
+}
+
 body {
   background-color: #191A1E;
   box-sizing: border-box;
@@ -83,6 +87,21 @@ h1 {
 }
 #header-content-two img {
   height: 44px;
+}
+
+#body-container {
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1160px;
+}
+
+.body-title-row {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  border-bottom: 2px solid #09BEFF;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,6 +8,9 @@ $yellow: #FFDE3E;
 $green: #47CF72;
 $purple: #AE62E4;
 
+* {
+  border: 1px solid red;
+}
 //main styles
 body {
   background-color: $grey;
@@ -104,4 +107,19 @@ h1 {
       height: 44px;
     }
 
+}
+
+#body-container {
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1160px;
+}
+
+.body-title-row {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  border-bottom: 2px solid $blue;
 }
