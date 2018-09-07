@@ -28,6 +28,7 @@ h1 {
 }
 #header-content-one-logo #logo-large {
   height: 28px;
+  margin-right: 20px;
 }
 
 #header-content-one-links {
@@ -35,23 +36,53 @@ h1 {
   flex-direction: row;
   justify-content: flex-start;
 }
+#header-content-one-links h1 {
+  margin-right: 20px;
+}
+#header-content-one-links #link-one:hover {
+  border-bottom: 2px solid #09BEFF;
+}
+#header-content-one-links #link-two:hover {
+  border-bottom: 2px solid #FFDE3E;
+}
+#header-content-one-links #link-three:hover {
+  border-bottom: 2px solid #47CF72;
+}
+#header-content-one-links #link-four:hover {
+  border-bottom: 2px solid #AE62E4;
+}
 
 #header-content-two {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#header-content-two i {
+#header-content-two * {
+  margin-right: 20px;
+}
+#header-content-two button {
+  background-color: #36383F;
+  border: none;
+  border-radius: 8px;
   color: white;
-  font-size: 30pt;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Catamaran", sans-serif;
+}
+#header-content-two button:hover {
+  background-color: #4e505a;
+}
+#header-content-two i {
+  color: #7A7D8C;
+  font-size: 24pt;
+}
+#header-content-two i:hover {
+  color: #9598a4;
 }
 #header-content-two img {
   height: 44px;
-}
-
-#header-content-two {
-  display: flex;
-  flex-direction: row;
 }
 
 /*# sourceMappingURL=styles.css.map */

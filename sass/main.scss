@@ -1,6 +1,12 @@
 //variables
 $grey: #191A1E;
+$mid-grey: #36383F;
+$light-grey: #7A7D8C;
 $black: #000000;
+$blue: #09BEFF;
+$yellow: #FFDE3E;
+$green: #47CF72;
+$purple: #AE62E4;
 
 //main styles
 body {
@@ -32,29 +38,70 @@ h1 {
   align-items: center;
   #logo-large {
     height: 28px;
-    }
+    margin-right: 20px;
   }
+}
 
-  #header-content-one-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+#header-content-one-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  h1 {
+    margin-right: 20px;
   }
+  #link-one {
+    &:hover {
+      border-bottom: 2px solid $blue;
+    }
+  }
+  #link-two {
+    &:hover {
+      border-bottom: 2px solid $yellow;
+    }
+  }
+  #link-three {
+    &:hover {
+      border-bottom: 2px solid $green;
+    }
+  }
+  #link-four {
+    &:hover {
+      border-bottom: 2px solid $purple;
+    }
+  }
+}
 
-  #header-content-two {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    i {
-        color: white;
-        font-size: 30pt;
-    }
-    img {
-      height: 44px;
-    }
-  }
 
 #header-content-two {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  & *{
+    margin-right: 20px;
+  }
+  button {
+    background-color: $mid-grey;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 24px;;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Catamaran', sans-serif;
+    &:hover {
+      background-color: lighten($mid-grey, 10%);
+    }
+  }
+    i {
+      color: $light-grey;
+      font-size: 24pt;
+      &:hover {
+        color: lighten($light-grey, 10%);
+      }
+    }
+    img {
+      height: 44px;
+    }
+
 }
