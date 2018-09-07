@@ -138,6 +138,9 @@ h1 {
   background-color: #32333B;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card-info-top img {
   margin-right: 20px;
@@ -173,6 +176,17 @@ h1 {
 }
 .card-info-bottom * {
   margin-right: 4px;
+}
+
+@media only screen and (max-width: 914px) {
+  .card {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 605px) {
+  .card {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

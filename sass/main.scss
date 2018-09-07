@@ -10,6 +10,8 @@ $blue: #09BEFF;
 $yellow: #FFDE3E;
 $green: #47CF72;
 $purple: #AE62E4;
+$break-medium: 914px;
+
 
 // * {
 //   background-color: $grey;
@@ -144,6 +146,7 @@ h1 {
   box-sizing: border-box;
 }
 
+
 .card-image {
   max-height:200px;
   overflow: hidden;
@@ -169,6 +172,10 @@ h1 {
   background-color: $card-content;
   margin-top: 10px;
   margin-bottom: 10px;
+  //hides overflow text
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   img {
     margin-right:20px;
     height: 40px;
@@ -200,5 +207,18 @@ h1 {
     background-color: $card-content;
   } * {
     margin-right: 4px;
+  }
+}
+
+
+@media only screen and (max-width: 914px) {
+  .card {
+      width: 50%;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .card {
+      width: 100%;
   }
 }
