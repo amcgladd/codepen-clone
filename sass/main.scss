@@ -2,6 +2,9 @@
 $grey: #191A1E;
 $mid-grey: #36383F;
 $light-grey: #7A7D8C;
+$card-content: #32333B;
+$card-author-text: #A5A9B0;
+$card-title-text: #FFFFFF;
 $black: #000000;
 $blue: #09BEFF;
 $yellow: #FFDE3E;
@@ -9,9 +12,12 @@ $green: #47CF72;
 $purple: #AE62E4;
 
 // * {
+//   background-color: $grey;
 //   border: 1px solid red;
+//   box-sizing: border-box;
 // }
-//main styles
+
+// main styles
 body {
   background-color: $grey;
   box-sizing: border-box;
@@ -96,16 +102,16 @@ h1 {
       background-color: lighten($mid-grey, 10%);
     }
   }
-    i {
-      color: $light-grey;
-      font-size: 24pt;
-      &:hover {
-        color: lighten($light-grey, 10%);
-      }
+  i {
+    color: $light-grey;
+    font-size: 24pt;
+    &:hover {
+      color: lighten($light-grey, 10%);
     }
-    img {
-      height: 44px;
-    }
+  }
+  img {
+    height: 44px;
+  }
 
 }
 
@@ -139,12 +145,60 @@ h1 {
 }
 
 .card-image {
-    max-height:200px;
-    overflow: hidden;
-}
-
-.card-image {
+  max-height:200px;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
   img {
     width: 100%;
+  }
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: $card-content;
+}
+
+.card-info-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $card-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  img {
+    margin-right:20px;
+    height: 40px;
+    width: 40px;
+  }
+  .card-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } span {
+    background-color: $card-content;
+    font-size: 18px;
+    margin-top:0px;
+    margin-bottom:0px;
+  } .card-title {
+    color: $card-title-text;
+  }
+  .card-author {
+    color: $card-author-text;
+  }
+}
+
+.card-info-bottom {
+  padding-top: 10px;
+  background-color: $card-content;
+  border-top: 1px solid $light-grey;
+  color: $card-author-text;
+  span {
+    background-color: $card-content;
+  } * {
+    margin-right: 4px;
   }
 }
