@@ -7,10 +7,10 @@
 #### Screenshots
 
 ### Original Site: codepen.io
-![Original Site](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![Original Site](https://github.com/amcgladd/codepen/blob/master/img/Screen-Original.png)
 
 ### Cloned Site:
-![Cloned Site](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![Cloned Site](https://github.com/amcgladd/codepen/blob/master/img/Screen-Clone.png)
 
 ## Description
 
