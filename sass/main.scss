@@ -20,83 +20,87 @@ $break-medium: 914px;
 $main-font: 'Catamaran', sans-serif;
 
 //mixins
-
-
-//styles
-body {
-  background-color: $grey;
-  box-sizing: border-box;
-  font-family: $main-font;
-  margin: 0px;
+//display flexing
+@mixin row-arranged {
+  display: flex;
+  flex-direction: row;
 }
 
-h1 {
-  color: white;
+@mixin column-arranged {
+  display: flex;
+  flex-direction: column;
+}
+//link hoevering function
+@mixin link-hovering($color) {
+  &:hover {
+    border-bottom: 2px solid $color;
+  }
+}
+
+@mixin space-slightly {
+  margin-right: 20px;
+}
+
+//main styles
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: $grey;
+  font-family: $main-font;
+  h1 {
+    color: white;
+  }
 }
 
 #header-container {
+  @include row-arranged;
   width: 100%;
   min-height: 79px;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background-color: $black;
 }
 
 #header-content-one {
-  display: flex;
-  flex-direction: row;
+  @include row-arranged;
   margin-left: 28px;
 }
 
 #header-content-one-logo {
-  display: flex;
-  flex-direction: row;
+  @include row-arranged;
   align-items: center;
   #logo-large {
     height: 28px;
-    margin-right: 20px;
+    @include space-slightly;
   }
 }
 
 #header-content-one-links {
-  display: flex;
-  flex-direction: row;
+  @include row-arranged;
   justify-content: flex-start;
   h1 {
-    margin-right: 20px;
+    @include space-slightly;
     border-bottom: 2px solid $black;
   }
   #link-one {
-    &:hover {
-      border-bottom: 2px solid $blue;
-    }
+    @include link-hovering($blue);
   }
   #link-two {
-    &:hover {
-      border-bottom: 2px solid $yellow;
-    }
+    @include link-hovering($yellow);
   }
   #link-three {
-    &:hover {
-      border-bottom: 2px solid $green;
-    }
+    @include link-hovering($green);
   }
   #link-four {
-    &:hover {
-      border-bottom: 2px solid $purple;
-    }
+    @include link-hovering($purple);
   }
 }
 
-
 #header-content-two {
-  display: flex;
-  flex-direction: row;
+  @include row-arranged;
   align-items: center;
   margin-right: 8px;
-  & *{
-    margin-right: 20px;
+  & * {
+    @include space-slightly;
   }
   button {
     background-color: $mid-grey;
@@ -106,15 +110,17 @@ h1 {
     padding: 10px 24px;;
     text-align: center;
     text-decoration: none;
-    font-size: 24px;
-    font-family: 'Catamaran', sans-serif;
+    font: {
+      size: 24px;
+      family: $main-font;
+    }
     &:hover {
       background-color: lighten($mid-grey, 10%);
     }
   }
   i {
     color: $light-grey;
-    font-size: 24pt;
+    font-size: 24px;
     &:hover {
       color: lighten($light-grey, 10%);
     }
@@ -122,7 +128,6 @@ h1 {
   img {
     height: 44px;
   }
-
 }
 
 #body-container {
@@ -133,8 +138,7 @@ h1 {
 }
 
 .link-container {
-  display: flex;
-  flex-direction: column;
+  @include column-arranged;
   justify-content: flex-end;
 }
 
@@ -145,8 +149,7 @@ h1 {
 }
 
 .body-title-row {
-  display: flex;
-  flex-direction: row;
+  @include row-arranged;
   height: 80px;
   justify-content: space-between;
   border-bottom: 2px solid $blue;
@@ -155,9 +158,8 @@ h1 {
 }
 
 .cards-container {
+  @include row-arranged;
   margin-top: 40px;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -169,6 +171,7 @@ h1 {
 
 
 .card-image {
+  //hides vertical excess of image
   max-height:200px;
   overflow: hidden;
   border-radius: 15px 15px 0px 0px;
@@ -181,8 +184,6 @@ h1 {
 }
 
 .card-info{
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   padding: 10px;
   border-radius: 0px 0px 15px 15px;
@@ -190,26 +191,22 @@ h1 {
 }
 
 .card-info-top {
-  display: flex;
-  flex-direction: row;
+  @include row-arranged;
   align-items: center;
   background-color: $card-content;
   margin-top: 10px;
   margin-bottom: 10px;
+
   //hides overflow text
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   img {
-    margin-right:20px;
+    @include space-slightly;
     height: 40px;
     width: 40px;
   }
-  .card-info-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  } span {
+  span {
     background-color: $card-content;
     font-size: 18px;
     margin-top:0px;
@@ -237,7 +234,7 @@ h1 {
 //media queries
 @media only screen and (max-width: $break-medium) {
   .card {
-      width: 50%;
+    width: 50%;
   } #header-content-one-links {
     display: none;
   }
@@ -245,7 +242,7 @@ h1 {
 
 @media only screen and (max-width: $break-small) {
   .card {
-      width: 100%;
+    width: 100%;
   } #bell-icon {
     display: none;
   }

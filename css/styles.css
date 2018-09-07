@@ -1,19 +1,18 @@
 body {
-  background-color: #191A1E;
-  box-sizing: border-box;
-  font-family: "Catamaran", sans-serif;
   margin: 0px;
+  box-sizing: border-box;
+  background-color: #191A1E;
+  font-family: "Catamaran", sans-serif;
 }
-
-h1 {
+body h1 {
   color: white;
 }
 
 #header-container {
-  width: 100%;
-  min-height: 79px;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  min-height: 79px;
   justify-content: space-between;
   background-color: #000000;
 }
@@ -81,7 +80,7 @@ h1 {
 }
 #header-content-two i {
   color: #7A7D8C;
-  font-size: 24pt;
+  font-size: 24px;
 }
 #header-content-two i:hover {
   color: #9598a4;
@@ -120,9 +119,9 @@ h1 {
 }
 
 .cards-container {
-  margin-top: 40px;
   display: flex;
   flex-direction: row;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 
@@ -145,8 +144,6 @@ h1 {
 }
 
 .card-info {
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   padding: 10px;
   border-radius: 0px 0px 15px 15px;
@@ -168,11 +165,6 @@ h1 {
   margin-right: 20px;
   height: 40px;
   width: 40px;
-}
-.card-info-top .card-info-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .card-info-top span {
   background-color: #32333B;
