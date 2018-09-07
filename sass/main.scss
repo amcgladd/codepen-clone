@@ -8,9 +8,9 @@ $yellow: #FFDE3E;
 $green: #47CF72;
 $purple: #AE62E4;
 
-* {
-  border: 1px solid red;
-}
+// * {
+//   border: 1px solid red;
+// }
 //main styles
 body {
   background-color: $grey;
@@ -122,4 +122,29 @@ h1 {
   height: 80px;
   justify-content: space-between;
   border-bottom: 2px solid $blue;
+}
+
+.cards-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  width: (100%/3);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card-image {
+    max-height:200px;
+    overflow: hidden;
+}
+
+.card-image {
+  img {
+    width: 100%;
+  }
 }
